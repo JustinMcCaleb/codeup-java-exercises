@@ -93,9 +93,8 @@ public class ControlFlowExercises {
 
 
             for (int a = 1; a <= userInputInt; a++) {
-                int number = a;
 
-                System.out.printf("%-6d %s %-7d %s %-5d\n", number, separator, number * number, separator, number * number * number);
+                System.out.printf("%-6d %s %-7d %s %-5d\n", a, separator, a * a, separator, a * a * a);
             }
             System.out.print("Do you wish to continue? [ Y / N ]");
             String userContinue = sc.next();
