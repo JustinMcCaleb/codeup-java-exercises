@@ -7,7 +7,7 @@ public class HighLow {
 
     public static void  highLowMethod(){
         int luckyNumber = randNum.nextInt(100);
-        System.out.println(luckyNumber + 1);
+        luckyNumber = luckyNumber + 1;
 
         boolean gateKeeper = true;
         while (gateKeeper) {
