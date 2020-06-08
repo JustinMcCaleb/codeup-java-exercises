@@ -46,6 +46,7 @@ public class MethodsExercises {
             System.out.println("Enter an integer from 1 - 10: ");
             int userInput = sc.nextInt();
             if (userInput >= 1 && userInput <= 10) {
+                System.out.printf("%d! = ", userInput);
                 long output = 1;
                 for (var a = 1; a <= userInput; a++) {
                     output *= a;
