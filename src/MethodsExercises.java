@@ -1,6 +1,5 @@
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Random;
 
 public class MethodsExercises {
   static Scanner sc = new Scanner(System.in);
@@ -32,7 +31,7 @@ public class MethodsExercises {
         int userInput = sc.nextInt();
 
         if (userInput >= min && userInput <= max) {
-            System.out.printf("%d is a valid input.", userInput);
+            System.out.printf("%d is a valid input.\n", userInput);
         }else {
             System.out.printf("%d is not a valid number\n", userInput);
             getInteger(min, max);
@@ -50,8 +49,10 @@ public class MethodsExercises {
                 long output = 1;
                 for (var a = 1; a <= userInput; a++) {
                     output *= a;
+                    if (a < userInput){
+                        System.out.print(a + " x ");
+                    }else System.out.print(a + " = " + output + "\n");
                 }
-                System.out.println(output);
             } else {
                 System.out.print("That is not a valid integer.\n");
             }
@@ -83,11 +84,11 @@ public class MethodsExercises {
     }
 
     public static void main(String[] args) {
-        //testArithmetic();
+        testArithmetic();
 
-        //getInteger(7, 666);
+        getInteger(7, 666);
 
-        //factorial();
+        factorial();
 
         diceRoll();
     }
