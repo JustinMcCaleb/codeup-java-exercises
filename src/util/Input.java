@@ -34,12 +34,12 @@ public class Input {
         return userInt;
     }
 
-    public int getDouble(){
-        return this.scanner.nextInt();
+    public double getDouble(){
+        return this.scanner.nextDouble();
     }
 
     public double getDouble(Double min, Double max){
-        int userInt = this.scanner.nextInt();
+        double userInt = this.scanner.nextDouble();
         if (userInt < min || userInt > max) {
             boolean gateKeeper = true;
             while (gateKeeper) {
