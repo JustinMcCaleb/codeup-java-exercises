@@ -3,7 +3,7 @@ public class Person {
     private String name;
 
     public String getName(){
-        return name;
+        return this.name;
     }
 
     public void setName(String name){
@@ -27,6 +27,7 @@ public class Person {
         Person p1 = new Person();
         p1.setName("Justin");
 //        System.out.println(p1.getName());
+        p1.sayHello();
 
         //Using a constructor to set name value and getter to print out name value
         Person p2 = new Person("Cheyenne");
