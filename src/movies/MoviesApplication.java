@@ -6,10 +6,9 @@ import java.util.Arrays;
 
 public class MoviesApplication {
 
-    static MoviesArray movie = new MoviesArray();
+//    static MoviesArray[] movie = new MoviesArray[]
 
     public static void main(String[] args) {
-        System.out.println();
         Input in = new Input();
 
         System.out.println("Welcome to the Movie App!");
