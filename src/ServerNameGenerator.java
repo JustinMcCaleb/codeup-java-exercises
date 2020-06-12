@@ -4,9 +4,31 @@ public class ServerNameGenerator {
 
     static Random randNum = new Random();
 
-    public static String[] adjectives = {"formidable", "savage", "groovy", "wondrous", "wicked", "auspicious", "terrific", "incandescent", "serpentine", "vivacious"};
+    public static String[] adjectives = {
+            "formidable",
+            "savage",
+            "groovy",
+            "wondrous",
+            "wicked",
+            "auspicious",
+            "terrific",
+            "incandescent",
+            "serpentine",
+            "vivacious"
+    };
 
-    public static String[] nouns = {"galaxy", "dragon", "plasma", "shadow", "vortex", "chaos", "underworld", "hell", "purgatory", "wolverine"};
+    public static String[] nouns = {
+            "galaxy",
+            "dragon",
+            "plasma",
+            "shadow",
+            "vortex",
+            "chaos",
+            "underworld",
+            "hell",
+            "purgatory",
+            "wolverine"
+    };
 
     public static String randomElement(String[] array){
         return array[randNum.nextInt(array.length)];

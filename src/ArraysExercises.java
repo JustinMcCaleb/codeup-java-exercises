@@ -21,13 +21,10 @@ public class ArraysExercises {
         peeps[1] = new Person("Lizzzzard");
         peeps[2] = new Person("Trapper");
 
+        peeps = addPerson(peeps, new Person("Lilly"));
+
         for (Person person : peeps){
             System.out.println(person.getName());
         }
-
-
-        Person[] newArray = addPerson(peeps, new Person("Justin"));
-        System.out.println(newArray[3].getName());
-
     }
 }
