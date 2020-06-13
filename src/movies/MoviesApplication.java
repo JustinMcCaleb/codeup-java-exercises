@@ -6,10 +6,9 @@ import java.util.Arrays;
 
 public class MoviesApplication {
 
-    static MoviesArray movie = new MoviesArray();
+    static Movie[] movies = MoviesArray.findAll();
 
     public static void main(String[] args) {
-        System.out.println();
         Input in = new Input();
 
         System.out.println("Welcome to the Movie App!");
@@ -26,24 +25,41 @@ public class MoviesApplication {
                     break;
                 case 1:
                     gateKeeper = true;
-                    System.out.println("all movies");
-                    System.out.println(Arrays.toString(MoviesArray.findAll()));
+                    for (Movie movie : movies) {
+                        System.out.println(movie.getName() + " -- " + movie.getCategory());
+                    }
                     break;
                 case 2:
                     gateKeeper = true;
-                    System.out.println("animated");
+                    for (Movie movie : movies) {
+                        if (movie.getCategory().equalsIgnoreCase("animated")) {
+                            System.out.println(movie.getName() + " -- " + movie.getCategory());
+                        }
+                    }
                     break;
                 case 3:
                     gateKeeper = true;
-                    System.out.println("drama");
+                    for(Movie movie : movies) {
+                        if (movie.getCategory().equalsIgnoreCase("drama")){
+                            System.out.println(movie.getName() + " -- " + movie.getCategory());
+                        }
+                    }
                     break;
                 case 4:
                     gateKeeper = true;
-                    System.out.println("horror");
+                    for (Movie movie : movies){
+                        if(movie.getCategory().equalsIgnoreCase("horror")){
+                            System.out.println(movie.getName() + " -- " + movie.getCategory());
+                        }
+                    }
                     break;
                 case 5:
                     gateKeeper = true;
-                    System.out.println("sci-fi");
+                    for (Movie movie : movies){
+                        if (movie.getCategory().equalsIgnoreCase("scifi")){
+                            System.out.println(movie.getName() + " -- " + movie.getCategory());
+                        }
+                    }
                     break;
             }
         }while (gateKeeper);
