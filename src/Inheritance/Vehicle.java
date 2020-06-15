@@ -7,7 +7,7 @@ public class Vehicle {
     private String powerSource;
 
 
-    public boolean isOperable() {
+    public boolean getIsOperable() {
         return isOperable;
     }
 
