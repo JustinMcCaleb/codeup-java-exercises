@@ -18,8 +18,20 @@ public class VehicleTest {
 
 
         System.out.println(vehicleA.toString());
+        System.out.println();
         System.out.println(carA.toString());
+        System.out.println();
         System.out.println(jetA.toString());
+        System.out.println();
+
+
+        Jet jetB = new Jet(true, 1, "Jet Fuel", 10000);
+
+        Car carB = new Car(true, 2, "Diesel", 32);
+
+        System.out.println(jetB.toString());
+        System.out.println();
+        System.out.println(carB.toString());
 
 
     }
