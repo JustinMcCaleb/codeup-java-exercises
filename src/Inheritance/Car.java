@@ -29,4 +29,12 @@ public class Car extends Vehicle {
                 "milesPerGallon=" + milesPerGallon +
                 "} " + super.toString();
     }
+
+    public void turnOn() {
+        System.out.println("Cranking engine...");
+    }
+
+    public void genericTurnOn () {
+        super.turnOn();
+    }
 }

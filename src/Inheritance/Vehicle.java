@@ -47,4 +47,8 @@ public class Vehicle {
                 ", powerSource='" + powerSource + '\'' +
                 '}';
     }
+
+    public void turnOn() {
+        System.out.println("Vehicle is turning on...");
+    }
 }

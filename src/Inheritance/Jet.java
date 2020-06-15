@@ -29,4 +29,12 @@ public class Jet extends Vehicle {
                 "maximumAltitude=" + maximumAltitude +
                 "} " + super.toString();
     }
+
+    public void turnOn() {
+        System.out.println("Igniting jet engines...");
+    }
+
+    public void genericTurnOn () {
+        super.turnOn();
+    }
 }
