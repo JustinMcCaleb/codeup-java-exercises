@@ -5,7 +5,7 @@ public class Rectangle {
     protected double length;
     protected double width;
 
-    public Rectangle(int l, int w) {
+    public Rectangle(double l, double w) {
         this.length = l;
         this.width = w;
     }
