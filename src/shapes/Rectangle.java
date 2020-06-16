@@ -2,19 +2,19 @@ package shapes;
 
 public class Rectangle {
 
-    protected int length;
-    protected int width;
+    protected double length;
+    protected double width;
 
     public Rectangle(int l, int w) {
         this.length = l;
         this.width = w;
     }
 
-    public int getArea() {
+    public double getArea() {
         return length * width;
     }
 
-    public int getPerimeter() {
+    public double getPerimeter() {
         return ((2 * length) + (2 * width));
     }
 }
