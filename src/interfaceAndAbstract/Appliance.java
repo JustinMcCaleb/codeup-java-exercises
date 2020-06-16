@@ -28,7 +28,7 @@ abstract class Appliance {
         this.color = color;
     }
 
-    public abstract void makeSound();
+    abstract void makeSound();
 
-    public abstract void doWork();
+    abstract void doWork();
 }
