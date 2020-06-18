@@ -8,8 +8,30 @@ public class Hero {
 
     public Hero(String name) {
         this.name = name;
-//        this.health = health;
-//        this.attackPoints = attackPoints;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public int getAttackPoints() {
+        return attackPoints;
+    }
+
+    public void setAttackPoints(int attackPoints) {
+        this.attackPoints = attackPoints;
     }
 
     //will take the probability method as an input and determine if punch was successful - 70% chance
