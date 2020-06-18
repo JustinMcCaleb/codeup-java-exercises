@@ -6,6 +6,10 @@ public class Input {
 
     private Scanner scanner;
 
+    public void clearNextLine() {
+        this.scanner.nextLine();
+    }
+
     public Input() {
         this.scanner = new Scanner(System.in);
     }
