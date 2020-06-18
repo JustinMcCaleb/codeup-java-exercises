@@ -16,7 +16,13 @@ public class GradesApplication {
 
         while (gateKeeper) {
 
-            System.out.println("Here are the Github usernames of our students: " + students.keySet() + "\n\nWhat student would you like to see more information on?");
+            System.out.println("Here are the Github usernames of our students: \n");
+
+            for (String x : students.keySet()) {
+                System.out.print("|" + x + "| ");
+            }
+
+            System.out.println("\n\nType in the Username(case sensitive) you would like to see more information on: ");
 
             String studentRequested = in.getString();
 
