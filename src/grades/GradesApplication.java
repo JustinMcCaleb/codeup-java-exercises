@@ -1,8 +1,40 @@
 package grades;
 
+import util.Input;
+
 import java.util.*;
 
+
 public class GradesApplication {
+
+    public static void studentInfo(HashMap<String, Student> students) {
+        Input in = new Input();
+
+        System.out.println("Welcome!\n");
+
+        boolean gateKeeper = true;
+
+        while (gateKeeper) {
+
+            System.out.println("Here are the Github usernames of our students: " + students.keySet() + "\n\nWhat student would you like to see more information on?");
+
+            String studentRequested = in.getString();
+
+            if (students.containsKey(studentRequested)) {
+                System.out.println("~*~*~*~*~*~*~~*~*~*~*~*~*~*~");
+                System.out.printf("Name: %s\nGitHub Username: %s\nCurrent Grade Average: %.1f", students.get(studentRequested).getName(), studentRequested, students.get(studentRequested).getGradeAverage());
+                System.out.println("\n~*~*~*~*~*~*~~*~*~*~*~*~*~*~");
+            }else {
+                System.out.printf("Sorry, no student found with the GitHub username: %s", studentRequested);
+            }
+            System.out.println("\n\nWould you like to continue? [ Y / N ]");
+            gateKeeper = in.yesNo();
+            in.clearNextLine();
+        }
+
+
+    }
+
     public static void main(String[] args) {
 
         HashMap<String, Student> students = new HashMap<>();
@@ -35,6 +67,9 @@ public class GradesApplication {
         students.put("Rabbit", student2);
         students.put("LizardKing", student3);
         students.put("Neo", student4);
+
+
+        studentInfo(students);
 
     }
 }
