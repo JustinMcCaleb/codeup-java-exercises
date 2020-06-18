@@ -28,6 +28,10 @@ public class Student{
         return totalGrade / grades.size();
     }
 
+    public void allGrades() {
+        System.out.println("Current Grades: " + this.grades);
+    }
+
     public static void main(String[] args) {
 
         Student a = new Student("Justin");

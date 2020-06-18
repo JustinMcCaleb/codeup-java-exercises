@@ -28,8 +28,9 @@ public class GradesApplication {
 
             if (students.containsKey(studentRequested)) {
                 System.out.println("~*~*~*~*~*~*~~*~*~*~*~*~*~*~");
-                System.out.printf("Name: %s\nGitHub Username: %s\nCurrent Grade Average: %.1f", students.get(studentRequested).getName(), studentRequested, students.get(studentRequested).getGradeAverage());
-                System.out.println("\n~*~*~*~*~*~*~~*~*~*~*~*~*~*~");
+                System.out.printf("Name: %s\nGitHub Username: %s\nCurrent Grade Average: %.1f\n", students.get(studentRequested).getName(), studentRequested, students.get(studentRequested).getGradeAverage());
+                students.get(studentRequested).allGrades();
+                System.out.println("~*~*~*~*~*~*~~*~*~*~*~*~*~*~");
             }else {
                 System.out.printf("Sorry, no student found with the GitHub username: %s", studentRequested);
             }
