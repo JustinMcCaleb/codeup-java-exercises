@@ -23,34 +23,30 @@ public class Input {
         return userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y");
     }
 
-//    public int getInt(){
-//        return this.scanner.nextInt();
-//    }
     //better practice instructor walk through. .hasNextInt() returns boolean. Uses recursion instead of loop, but had to use "scanner.next()" to clear out scanner and allows for a new input from user.
-    public int getInt(){
-        if (scanner.hasNextInt()){
-            return scanner.nextInt();
-        }else {
-            System.out.println("Invalid Input. Enter Valid integer.");
-            scanner.next();
-            return getInt();
+        public int getInt(){
+            if (scanner.hasNextInt()){
+                return scanner.nextInt();
+            }else {
+                System.out.println("Invalid Input. Enter Valid integer.");
+                scanner.next();
+                return getInt();
+            }
         }
-    }
-
-//    public int getInt(int min, int max){
-//        int userInt = this.scanner.nextInt();
-//        if (userInt < min || userInt > max) {
-//            boolean gateKeeper = true;
-//            while (gateKeeper) {
-//                System.out.printf("That integer is not within the bounds.\nPlease enter an integer between %d and %d", min, max);
-//                int userInt2 = this.scanner.nextInt();
-//                if (userInt2 >= min && userInt2 <= max) {
-//                    gateKeeper = false;
-//                }
-//            }
+//    public int getInt(){
+//        String numInput = getString();
+//        Integer integer = new Integer(getString());
+//        int x;
+//        try {
+//             x = Integer.valueOf(numInput);
+//        }catch (NumberFormatException e){
+//            System.out.println("Invalid Input. Enter Valid integer.");
+//            e.getMessage();
+//            getInt();
 //        }
-//        return userInt;
+//        return x;
 //    }
+
 
     //instructor walk through using recursion
     public int getInt(int min, int max) {
