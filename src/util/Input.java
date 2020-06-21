@@ -24,28 +24,26 @@ public class Input {
     }
 
     //better practice instructor walk through. .hasNextInt() returns boolean. Uses recursion instead of loop, but had to use "scanner.next()" to clear out scanner and allows for a new input from user.
-        public int getInt(){
-            if (scanner.hasNextInt()){
-                return scanner.nextInt();
-            }else {
-                System.out.println("Invalid Input. Enter Valid integer.");
-                scanner.next();
-                return getInt();
-            }
-        }
-//    public int getInt(){
-//        String numInput = getString();
-//        Integer integer = new Integer(getString());
-//        int x;
-//        try {
-//             x = Integer.valueOf(numInput);
-//        }catch (NumberFormatException e){
-//            System.out.println("Invalid Input. Enter Valid integer.");
-//            e.getMessage();
-//            getInt();
+//        public int getInt(){
+//            if (scanner.hasNextInt()){
+//                return scanner.nextInt();
+//            }else {
+//                System.out.println("Invalid Input. Enter Valid integer.");
+//                scanner.next();
+//                return getInt();
+//            }
 //        }
-//        return x;
-//    }
+    private static int integer;
+    public int getInt(){
+        try {
+            integer = Integer.valueOf(getString());
+        }catch (NumberFormatException e){
+            System.out.println("Invalid Input. Enter Valid integer.");
+            System.out.println(e.getMessage());
+            getInt();
+        }
+        return integer;
+    }
 
 
     //instructor walk through using recursion
@@ -59,8 +57,20 @@ public class Input {
         }
     }
 
+//    public double getDouble(){
+//        return this.scanner.nextDouble();
+//    }
+
+    private static double dub;
     public double getDouble(){
-        return this.scanner.nextDouble();
+        try {
+            dub = Double.valueOf(getString());
+        }catch (NumberFormatException e){
+            System.out.println("Invalid Input. Enter Valid double.");
+            System.out.println(e.getMessage());
+            getDouble();
+        }
+        return dub;
     }
 
     public double getDouble(Double min, Double max){
