@@ -33,16 +33,16 @@ public class Input {
 //                return getInt();
 //            }
 //        }
-    private static int integer;
+//    private static int integer;
     public int getInt(){
         try {
-            integer = Integer.valueOf(getString());
+            int integer = Integer.valueOf(getString());
+            return integer;
         }catch (NumberFormatException e){
-            System.out.println("Invalid Input. Enter Valid integer.");
             System.out.println(e.getMessage());
-            getInt();
+            System.out.println("Invalid Input. Enter Valid integer.");
+            return getInt();
         }
-        return integer;
     }
 
 
@@ -61,16 +61,15 @@ public class Input {
 //        return this.scanner.nextDouble();
 //    }
 
-    private static double dub;
     public double getDouble(){
         try {
-            dub = Double.valueOf(getString());
+            double dub = Double.valueOf(getString());
+            return dub;
         }catch (NumberFormatException e){
             System.out.println("Invalid Input. Enter Valid double.");
             System.out.println(e.getMessage());
-            getDouble();
+            return getDouble();
         }
-        return dub;
     }
 
     public double getDouble(Double min, Double max){
