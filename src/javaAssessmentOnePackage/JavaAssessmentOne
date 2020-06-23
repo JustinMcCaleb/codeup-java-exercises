@@ -35,8 +35,8 @@ The following are several points of competency and skill that are intended to he
 ​
 ### Java I
 ​
-- [ ] I can write a hello world Java program from scratch.
-- [ ] I can write Java control statements (if, if/else, switch, ternary) and loops (while, do-while, for, for-each) from memory.
+- [X] I can write a hello world Java program from scratch.
+- [X] I can write Java control statements (if, if/else, switch, ternary) and loops (while, do-while, for, for-each) from memory.
 - [ ] I can write examples of the 8 Java primitive types.
 - [ ] I can write examples of explicit casting and implicit casting.
 - [ ] I can convert a numeric string to a number and a number to a numeric string.
